@@ -192,7 +192,7 @@ export class Spotify extends Plugin {
         return { tracks: [ track ] };
     }
 
-    private static convertToUnresolved(track: SpotifyTrack): UnresolvedQuery {
+    private static convertToUnresolved(track: SpotifyTrack): Omit<UnresolvedTrack, "resolve"> {
         if (!track) throw new ReferenceError("The Spotify track object was not provided");
         if (!track.artists) throw new ReferenceError("The track artists array was not provided");
         if (!track.name) throw new ReferenceError("The track name was not provided");
@@ -203,6 +203,8 @@ export class Spotify extends Plugin {
             title: track.name,
             author: track.artists[0].name,
             duration: track.duration_ms,
+            uri: track.external_urls.spotify,
+            thumbnail: (track as SpotifyTrack).album?.images[0] ? (track as SpotifyTrack).album?.images[0].url : null,
         };
     }
 
@@ -282,6 +284,19 @@ export interface SpotifyTrack {
     artists: Artist[];
     name: string;
     duration_ms: number;
+    external_urls: {
+        spotify: string;
+    };
+    images?: SpotifyThumbnail[];
+    album?: {
+        images: SpotifyThumbnail[];
+    };
+}
+
+export interface SpotifyThumbnail {
+    height: number;
+    url: string;
+    width: number;
 }
 
 export interface SearchResult {
