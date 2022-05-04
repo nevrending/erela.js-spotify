@@ -62,6 +62,18 @@ export interface SpotifyTrack {
     artists: Artist[];
     name: string;
     duration_ms: number;
+    external_urls: {
+        spotify: string;
+    };
+    images?: SpotifyThumbnail[];
+    album?: {
+        images: SpotifyThumbnail[];
+    };
+}
+export interface SpotifyThumbnail {
+    height: number;
+    url: string;
+    width: number;
 }
 export interface SearchResult {
     exception?: {
