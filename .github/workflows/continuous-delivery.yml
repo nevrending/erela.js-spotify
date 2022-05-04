@@ -12,10 +12,10 @@ jobs:
     steps:
       - name: Checkout Project
         uses: actions/checkout@v2
-      - name: Use Node.js 14
+      - name: Use Node.js 16
         uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: 16
       - name: Restore CI Cache
         uses: actions/cache@v1
         with:
@@ -56,5 +56,5 @@ jobs:
           git push origin $TARGET_BRANCH
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_ACTOR: Solaris9
+          GITHUB_ACTOR: nevrending
           GITHUB_EMAIL: ${{ secrets.EMAIL }}

@@ -3,22 +3,22 @@
 <img src="https://img.shields.io/discord/416512197590777857?color=7289DA&label=Support&logo=discord&style=for-the-badge" alt="Discord">
 </a> 
 
-<a href="https://www.npmjs.com/package/erela.js-spotify">
-<img src="https://img.shields.io/npm/dw/erela.js-spotify?color=CC3534&logo=npm&style=for-the-badge" alt="Downloads">
+<a href="https://www.npmjs.com/package/@nevrending/erela.js-spotify">
+<img src="https://img.shields.io/npm/dw/@nevrending/erela.js-spotify?color=CC3534&logo=npm&style=for-the-badge" alt="Downloads">
 </a>
 
-<a href="https://www.npmjs.com/package/erela.js-spotify">
-<img src="https://img.shields.io/npm/v/erela.js-spotify?color=red&label=Version&logo=npm&style=for-the-badge" alt="Npm version">
+<a href="https://www.npmjs.com/package/@nevrending/erela.js-spotify">
+<img src="https://img.shields.io/npm/v/@nevrending/erela.js-spotify?color=red&label=Version&logo=npm&style=for-the-badge" alt="Npm version">
 </a>
 
 <br>
 
-<a href="https://github.com/MenuDocs/erela.js-spotify">
-<img src="https://img.shields.io/github/stars/MenuDocs/erela.js-spotify?color=333&logo=github&style=for-the-badge" alt="Github stars">
+<a href="https://github.com/nevrending/erela.js-spotify">
+<img src="https://img.shields.io/github/stars/nevrending/erela.js-spotify?color=333&logo=github&style=for-the-badge" alt="Github stars">
 </a>
 
-<a href="https://github.com/MenuDocs/erela.js-spotify/blob/master/LICENSE">
-<img src="https://img.shields.io/github/license/MenuDocs/erela.js-spotify?color=6e5494&logo=github&style=for-the-badge" alt="License">
+<a href="https://github.com/nevrending/erela.js-spotify/blob/master/LICENSE">
+<img src="https://img.shields.io/github/license/nevrending/erela.js-spotify?color=6e5494&logo=github&style=for-the-badge" alt="License">
 </a>
 <hr>
 </div>
@@ -33,9 +33,9 @@ This a plugin for Erela.JS to allow the use of Spotify URL's, it uses direct URL
 
 It is recommended to read the documentation to start, and the guides to use the plugin.
 
-- [Documentation](https://solaris-site.netlify.app/projects/erelajs/docs/gettingstarted.html "Erela.js Documentation") 
+- [Documentation](https://erelajs-docs.netlify.app/docs/gettingstarted.html "Erela.js Documentation") 
 
-- [Guides](https://solaris-site.netlify.app/projects/erelajs/guides/introduction.html 'Erela.js Guides')
+- [Guides](https://erelajs-docs.netlify.app/guides/introduction.html 'Erela.js Guides')
 
 ## Prerequisites
 
@@ -45,12 +45,12 @@ It is recommended to read the documentation to start, and the guides to use the 
 
 **NPM** :
 ```sh
-npm install erela.js-spotify
+npm install @nevrending/erela.js-spotify
 ```
 
 **Yarn** :
 ```sh
-yarn add erela.js-spotify
+yarn add @nevrending/erela.js-spotify
 ```
 
 ## Options
@@ -82,7 +82,7 @@ yarn add erela.js-spotify
 
 ```javascript
 const { Manager } = require("erela.js");
-const Spotify  = require("erela.js-spotify");
+const Spotify  = require("@nevrending/erela.js-spotify");
 
 const clientID = "example ID"; // clientID from your Spotify app
 const clientSecret = "example secret"; // clientSecret from your Spotify app
